@@ -1,3 +1,4 @@
+
 const express = require("express");
 const router = express.Router();
 const fs = require("fs");
@@ -44,6 +45,32 @@ router.post("/", (req, res) => {
   res.status(201).json(newModel);
 });
 
+// PUT - éditer un modèle existant par ID
+router.put("/:id", (req, res) => {
+  const models = JSON.parse(fs.readFileSync(filePath));
+  const id = req.params.id;
+  const modelIndex = models.findIndex(m => m.id == id);
+
+  if (modelIndex === -1) {
+    return res.status(404).json({ error: "Model not found" });
+  }
+
+  const { name, brandId } = req.body;
+
+  // Validation du name
+  if (!name || typeof name !== "string" || name.trim() === "") {
+    return res.status(400).json({ error: "The 'name' field is required and must be a non-empty string" });
+  }
+
+  // Mettre à jour le modèle existant
+  models[modelIndex].name = name.trim();
+  if (brandId !== undefined) {
+    models[modelIndex].brandId = brandId;
+  }
+
+  fs.writeFileSync(filePath, JSON.stringify(models, null, 2));
+  res.json(models[modelIndex]);
+});
 
 // DELETE - supprimer un modèle
 router.delete("/:id", (req, res) => {

@@ -42,6 +42,27 @@ router.post("/", (req, res) => {
   res.status(201).json(newBrand);
 });
 
+// PUT - éditer une marque par ID
+router.put("/:id", (req, res) => {
+  const brands = JSON.parse(fs.readFileSync(filePath));
+  const brandIndex = brands.findIndex(b => b.id == req.params.id);
+
+  if (brandIndex === -1) {
+    return res.status(404).json({ error: "Brand not found" });
+  }
+
+  const { name } = req.body;
+  if (!name || typeof name !== "string" || name.trim() === "") {
+    return res.status(400).json({ error: "The 'name' field is required and must be a non-empty string" });
+  }
+
+  brands[brandIndex].name = name.trim();
+  fs.writeFileSync(filePath, JSON.stringify(brands, null, 2));
+
+  res.json(brands[brandIndex]);
+});
+
+
 
 // DELETE - supprimer une marque
 router.delete("/:id", (req, res) => {
