@@ -71,3 +71,8 @@ mini-api-catalogue/
 | GET     | /models/:id       | Récupère un modèle par ID           |
 | POST    | /models           | Ajoute un nouveau modèle            |
 | DELETE  | /models/:id       | Supprime un modèle par ID           |
+
+
+## 👤 Contributeurs
+
+Yanis BRAHIMI & Levi Jonathan GNAKALE
