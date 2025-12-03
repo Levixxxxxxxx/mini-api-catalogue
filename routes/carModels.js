@@ -29,7 +29,7 @@ router.post("/", (req, res) => {
 
   // Validation du name
   if (!name || typeof name !== "string" || name.trim() === "") {
-    return res.status(400).json({ error: "Le champ 'name' est requis et doit être une chaîne de caractères non vide." });
+    return res.status(400).json({ error: "The 'name' field is required and must be a non-empty string" });
   }
 
   const newModel = {
