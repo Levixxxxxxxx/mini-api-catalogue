@@ -25,9 +25,15 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   const brands = JSON.parse(fs.readFileSync(filePath));
 
+  // Validation simple
+  const { name } = req.body;
+  if (!name || typeof name !== "string" || name.trim() === "") {
+    return res.status(400).json({ error: "The 'name' field is required and must be a non-empty string" });
+  }
+
   const newBrand = {
     id: brands.length ? brands[brands.length - 1].id + 1 : 1,
-    name: req.body.name
+    name: name.trim() // on supprime les espaces avant/après
   };
 
   brands.push(newBrand);
@@ -35,6 +41,7 @@ router.post("/", (req, res) => {
 
   res.status(201).json(newBrand);
 });
+
 
 // DELETE - supprimer une marque
 router.delete("/:id", (req, res) => {
