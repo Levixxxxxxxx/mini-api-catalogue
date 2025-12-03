@@ -25,10 +25,17 @@ router.get("/:id", (req, res) => {
 router.post("/", (req, res) => {
   const models = JSON.parse(fs.readFileSync(filePath));
 
+  const { name, brandId } = req.body;
+
+  // Validation du name
+  if (!name || typeof name !== "string" || name.trim() === "") {
+    return res.status(400).json({ error: "Le champ 'name' est requis et doit être une chaîne de caractères non vide." });
+  }
+
   const newModel = {
-    id: models.length ? models[models.length - 1].id + 1 : 1,
-    name: req.body.name,
-    brandId: req.body.brandId
+    id: models.length ? models[models.length - 1].id + 1 : 1, // ID automatique
+    name: name.trim(),
+    brandId // ID de la marque fourni
   };
 
   models.push(newModel);
@@ -36,6 +43,7 @@ router.post("/", (req, res) => {
 
   res.status(201).json(newModel);
 });
+
 
 // DELETE - supprimer un modèle
 router.delete("/:id", (req, res) => {
