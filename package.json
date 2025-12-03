@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Levixxxxxxxx/mini-api-catalogue/issues"
   },
-  "homepage": "https://github.com/Levixxxxxxxx/mini-api-catalogue#readme"
+  "homepage": "https://github.com/Levixxxxxxxx/mini-api-catalogue#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
 }
