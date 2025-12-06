@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
 const PORT = 3000;
+const cors = require("cors");
+
+
+// Autoriser React à accéder à l'API
+app.use(cors());
 
 // Pour lire le JSON dans les requêtes POST
 app.use(express.json());

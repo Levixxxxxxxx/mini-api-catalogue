@@ -1,7 +1,26 @@
 [
-  { "id": 1, "name": "Toyota" },
-  { "id": 2, "name": "BMW" },
-  { "id": 3, "name": "Ford" },
-  { "id": 4, "name": "Honda" },
-  { "id": 5, "name": "Tesla" }
+  {
+    "id": 1,
+    "name": "Toyota"
+  },
+  {
+    "id": 2,
+    "name": "BMW"
+  },
+  {
+    "id": 3,
+    "name": "Ford"
+  },
+  {
+    "id": 4,
+    "name": "Honda"
+  },
+  {
+    "id": 5,
+    "name": "Tesla"
+  },
+  {
+    "id": 6,
+    "name": "Xenus"
+  }
 ]
