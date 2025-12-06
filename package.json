@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Levixxxxxxxx/mini-api-catalogue#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^5.2.1"
   }
 }

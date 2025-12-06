@@ -1,26 +1,102 @@
 [
-  { "id": 1, "name": "Corolla",   "brandId": 1 },
-  { "id": 2, "name": "Camry",     "brandId": 1 },
-  { "id": 3, "name": "Prius",     "brandId": 1 },
-  { "id": 4, "name": "Supra",     "brandId": 1 },
-
-  { "id": 5,  "name": "M4",       "brandId": 2 },
-  { "id": 6,  "name": "M3",       "brandId": 2 },
-  { "id": 7,  "name": "X5",       "brandId": 2 },
-  { "id": 8,  "name": "i8",       "brandId": 2 },
-
-  { "id": 9,  "name": "Mustang",  "brandId": 3 },
-  { "id": 10, "name": "Focus",    "brandId": 3 },
-  { "id": 11, "name": "Explorer", "brandId": 3 },
-  { "id": 12, "name": "Fiesta",   "brandId": 3 },
-
-  { "id": 13, "name": "Civic",    "brandId": 4 },
-  { "id": 14, "name": "Accord",   "brandId": 4 },
-  { "id": 15, "name": "CR-V",     "brandId": 4 },
-  { "id": 16, "name": "Fit",      "brandId": 4 },
-
-  { "id": 17, "name": "Model S",  "brandId": 5 },
-  { "id": 18, "name": "Model 3",  "brandId": 5 },
-  { "id": 19, "name": "Model X",  "brandId": 5 },
-  { "id": 20, "name": "Model Y",  "brandId": 5 }
+  {
+    "id": 1,
+    "name": "Corolla",
+    "brandId": 1
+  },
+  {
+    "id": 2,
+    "name": "Camry",
+    "brandId": 1
+  },
+  {
+    "id": 3,
+    "name": "Prius",
+    "brandId": 1
+  },
+  {
+    "id": 4,
+    "name": "Supra",
+    "brandId": 1
+  },
+  {
+    "id": 5,
+    "name": "M4",
+    "brandId": 2
+  },
+  {
+    "id": 6,
+    "name": "M3",
+    "brandId": 2
+  },
+  {
+    "id": 7,
+    "name": "X5",
+    "brandId": 2
+  },
+  {
+    "id": 8,
+    "name": "i8",
+    "brandId": 2
+  },
+  {
+    "id": 9,
+    "name": "Mustang",
+    "brandId": 3
+  },
+  {
+    "id": 10,
+    "name": "Focus",
+    "brandId": 3
+  },
+  {
+    "id": 11,
+    "name": "Explorer",
+    "brandId": 3
+  },
+  {
+    "id": 12,
+    "name": "Fiesta",
+    "brandId": 3
+  },
+  {
+    "id": 13,
+    "name": "Civic",
+    "brandId": 4
+  },
+  {
+    "id": 14,
+    "name": "Accord",
+    "brandId": 4
+  },
+  {
+    "id": 15,
+    "name": "CR-V",
+    "brandId": 4
+  },
+  {
+    "id": 16,
+    "name": "Fit",
+    "brandId": 4
+  },
+  {
+    "id": 17,
+    "name": "Model S",
+    "brandId": 5
+  },
+  {
+    "id": 18,
+    "name": "Model 3",
+    "brandId": 5
+  },
+  {
+    "id": 19,
+    "name": "Model X",
+    "brandId": 5
+  },
+  {
+    "id": 20,
+    "name": "Model Y",
+    "brandId": 5
+  }
 ]
